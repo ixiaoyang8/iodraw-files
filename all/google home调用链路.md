@@ -16,10 +16,10 @@ sequenceDiagram
     DevService-->>MideaEco: 返回设备信息和设备状态
     MideaEco->>Streamsets: 传输控制指令、设备信息和设备状态
     Streamsets-->>MideaEco: 转换并返回Midea控制指令
-    DevService->>Device: 下发控制指令
-    Device-->>DevService: 等待返回控制结果
     MideaEco->>DevService: 调用下发Midea控制指令
     MideaEco->>DevService: 调用查询控制后的最新设备状态
+    DevService->>Device: 下发控制指令
+    Device-->>DevService: 等待返回控制结果
     DevService-->>MideaEco: 返回最新设备状态
     MideaEco->>Streamsets: 传输最新设备状态
     Streamsets-->>MideaEco: 转换并返回Google Home可识别的设备状态
