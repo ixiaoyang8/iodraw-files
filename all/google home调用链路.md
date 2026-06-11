@@ -10,7 +10,7 @@ sequenceDiagram
     
 
     GoogleHome->>MideaEco: 发起EXECUTE控制指令
-    MideaEco->>KongOAuth: 调用进行token校验
+    MideaEco->>KongOAuth: 进行token校验
     KongOAuth-->>MideaEco: Token校验通过
     MideaEco->>DevService: 调用查询设备信息和设备状态
     DevService-->>MideaEco: 返回设备信息和设备状态
